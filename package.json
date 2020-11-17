@@ -1,7 +1,7 @@
 {
-  "homepage": "./",
   "name": "kp2r-oracle",
   "version": "0.0.1",
+  "homepage": "https://feed.kp2r.network",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
