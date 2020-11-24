@@ -89,10 +89,10 @@ class Store {
           price_id: 'maker',
         },
         {
-          address: "0x1ceb5cb57c4d4e2b2433641b95dd330a33185a44",
+          address: "0x9BdE098Be22658d057C3F1F185e3Fd4653E2fbD1",
           decimals: "18",
-          symbol: "KP3R",
-          price_id: 'keep3rv1',
+          symbol: "KP2R",
+          price_id: 'keep2r',
         },
         {
           address: "0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f",
