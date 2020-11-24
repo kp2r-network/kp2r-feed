@@ -56,7 +56,7 @@ const iswapTheme =  {
       '"Segoe UI Symbol"',
     ].join(','),
     h1: {
-      fontSize: '30px',
+      fontSize: '36px',
       fontWeight: '500',
       WebkitFontSmoothing: "antialiased",
       MozOsxFontSmoothing: "grayscale",

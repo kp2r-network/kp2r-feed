@@ -29,7 +29,7 @@ const styles = theme => ({
   },
   feedContainer: {
     background: colors.lightGray,
-    width: '200px',
+    width: '180px',
     padding: '24px 8px',
     minHeight: '280px',
     margin: '12px',
@@ -137,7 +137,7 @@ class Feeds extends Component {
         { (!feed.token0 || !feed.token1) && <CircularProgress className={ classes.absoluteCenter } /> }
         { feed.token0 && feed.token1 &&
           <div className={ classes.pair }>
-            <Typography variant='h2'>{ feed.token0.symbol } / { feed.token1.symbol }</Typography>
+            <Typography variant='h2'> { feed.token0.symbol } / { feed.token1.symbol }</Typography>
           </div>
         }
         { feed.token0 && feed.token1 &&

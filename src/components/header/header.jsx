@@ -20,7 +20,7 @@ const styles = theme => ({
     width: '100%',
     borderRadius: '0px',
     display: 'flex',
-    padding: '24px 32px',
+    padding: '16px 32px',
     alignItems: 'center',
     justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
@@ -38,22 +38,8 @@ const styles = theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    flex: 1
   },
   link: {
-    padding: '12px 0px',
-    margin: '0px 12px',
-    cursor: 'pointer',
-    borderBottom: "3px solid "+colors.white,
-    '&:hover': {
-      borderBottom: "3px solid "+colors.borderBlue,
-    },
-    [theme.breakpoints.down('sm')]: {
-      margin: '0px 4px',
-    }
-  },
-  link: {
-    padding: '12px 0px',
     margin: '0px 12px',
     cursor: 'pointer',
     borderBottom: "3px solid #394053",
@@ -184,13 +170,10 @@ class Header extends Component {
               <Typography variant={ 'h4'} >Governance</Typography>
             </div>
             <div className={ classes.link } onClick={()=> window.open("/", "_blank")} >
-              <Typography variant={ 'h4'} >Data</Typography>
+              <Typography variant={ 'h4'} >Feed</Typography>
             </div>
-            <div className={ classes.link } onClick={()=> window.open("https://docs.kp2r.network/", "_blank")} >
-              <Typography variant={ 'h4'} >Docs</Typography>
-            </div>
-            <div className={ classes.link } onClick={()=> window.open("https://docs.kp2r.network/registry", "_blank")} >
-              <Typography variant={ 'h4'} >Registry</Typography>
+            <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/how-to-use", "_blank")} >
+              <Typography variant={ 'h4'} >How to Use</Typography>
             </div>
             <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/pre-sale", "_blank")} >
               <Typography variant={ 'h4'} >Pre-Sale</Typography>
