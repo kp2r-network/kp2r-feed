@@ -10,7 +10,7 @@ import {
 import { ERC20ABI } from "./abi/erc20ABI";
 import { UniswapV2OracleABI } from './abi/uniswapV2OracleABI';
 import { UniswapV2PairABI } from './abi/uniswapV2PairABI';
-import { Keep3rV1OracleABI } from './abi/keep3rV1OracleABI'
+import { Keep2rOracleABI } from './abi/keep2rOracleABI'
 
 import Web3 from 'web3';
 const web3 = new Web3(config.provider)
@@ -152,7 +152,7 @@ class Store {
 
   getFeeds = async () => {
     try {
-      const uniOracleContract = new web3.eth.Contract(Keep3rV1OracleABI, config.keep3rOracleAddress)
+      const uniOracleContract = new web3.eth.Contract(Keep2rOracleABI, config.keep2rOracleAddress)
       const pairs = await uniOracleContract.methods.pairs().call({})
 
       if(!pairs || pairs.length === 0) {
@@ -276,7 +276,7 @@ class Store {
   _getConsult = async (pair) => {
     try {
 
-      const uniOracleContract = new web3.eth.Contract(Keep3rV1OracleABI, config.keep3rOracleAddress)
+      const uniOracleContract = new web3.eth.Contract(Keep2rOracleABI, config.keep2rOracleAddress)
 
       let sendAmount0 = (10**pair.token0.decimals).toFixed(0)
       let sendAmount1 = (10**pair.token1.decimals).toFixed(0)
@@ -301,7 +301,7 @@ class Store {
 
   _getLastUpdated = async (pair) => {
     try {
-      const uniOracleContract = new web3.eth.Contract(Keep3rV1OracleABI, config.keep3rOracleAddress)
+      const uniOracleContract = new web3.eth.Contract(Keep2rOracleABI, config.keep2rOracleAddress)
 
       const lastUpdated = await uniOracleContract.methods.lastObservation(pair.address).call({ })
 
@@ -312,13 +312,13 @@ class Store {
   }
 
   _getVolatility = async (pair) => {
-    const keep3rOracleContract = new web3.eth.Contract(Keep3rV1OracleABI, config.keep3rOracleAddress)
+    const keep2rOracleContract = new web3.eth.Contract(Keep2rOracleABI, config.keep2rOracleAddress)
     const sendAmount = (10**pair.token0.decimals).toFixed(0)
 
     try {
-      const realizedVolatilityHourly = await keep3rOracleContract.methods.realizedVolatilityHourly(pair.token0.address, sendAmount, pair.token1.address).call({ })
-      const realizedVolatilityDaily = await keep3rOracleContract.methods.realizedVolatilityDaily(pair.token0.address, sendAmount, pair.token1.address).call({ })
-      const realizedVolatilityWeekly = await keep3rOracleContract.methods.realizedVolatilityWeekly(pair.token0.address, sendAmount, pair.token1.address).call({ })
+      const realizedVolatilityHourly = await keep2rOracleContract.methods.realizedVolatilityHourly(pair.token0.address, sendAmount, pair.token1.address).call({ })
+      const realizedVolatilityDaily = await keep2rOracleContract.methods.realizedVolatilityDaily(pair.token0.address, sendAmount, pair.token1.address).call({ })
+      const realizedVolatilityWeekly = await keep2rOracleContract.methods.realizedVolatilityWeekly(pair.token0.address, sendAmount, pair.token1.address).call({ })
 
       return {
         realizedVolatilityHourly: realizedVolatilityHourly/1e18,
@@ -328,7 +328,7 @@ class Store {
       console.log(e)
 
       try {
-        const realizedVolatility = await keep3rOracleContract.methods.realizedVolatility(pair.token0.address, sendAmount, pair.token1.address, 24, 2).call({ })
+        const realizedVolatility = await keep2rOracleContract.methods.realizedVolatility(pair.token0.address, sendAmount, pair.token1.address, 24, 2).call({ })
 
         return {
           realizedVolatility: realizedVolatility/1e18,
@@ -351,7 +351,7 @@ class Store {
 
   _getUSDPrices = async () => {
     try {
-      const url = 'https://api.coingecko.com/api/v3/simple/price?ids=dai,usd-coin,true-usd,tether,yearn-finance,wrapped-bitcoin,ethereum,aave,uniswap,compound-governance-token,maker,havven,curve-dao-token,keep3rV1,link&vs_currencies=usd'
+      const url = 'https://api.coingecko.com/api/v3/simple/price?ids=dai,usd-coin,true-usd,tether,yearn-finance,wrapped-bitcoin,ethereum,aave,uniswap,compound-governance-token,maker,havven,curve-dao-token,keep2r,link&vs_currencies=usd'
       const priceString = await rp(url);
       const priceJSON = JSON.parse(priceString)
 
