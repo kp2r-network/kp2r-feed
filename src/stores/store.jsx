@@ -35,12 +35,6 @@ class Store {
           price_id: 'ethereum',
         },
         {
-          address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
-          decimals: "8",
-          symbol: "WBTC",
-          price_id: 'wrapped-bitcoin',
-        },
-        {
           address: "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
           decimals: "6",
           symbol: "USDC",
@@ -99,20 +93,8 @@ class Store {
           decimals: "18",
           symbol: "SNX",
           price_id: 'havven',
-        },
-        {
-          address: "0x514910771af9ca656af840dff83e8264ecf986ca",
-          decimals: "18",
-          symbol: "LINK",
-          price_id: 'link',
-        },
-        {
-          address: "0xd533a949740bb3306d119cc777fa900ba034cd52",
-          decimals: "18",
-          symbol: "CRV",
-          price_id: 'curve-dao-token',
         }
-      ],
+        ],
       priceFeeds: [
 
       ]
@@ -351,7 +333,7 @@ class Store {
 
   _getUSDPrices = async () => {
     try {
-      const url = 'https://api.coingecko.com/api/v3/simple/price?ids=dai,usd-coin,true-usd,tether,yearn-finance,wrapped-bitcoin,ethereum,aave,uniswap,compound-governance-token,maker,havven,curve-dao-token,keep2r,link&vs_currencies=usd'
+      const url = 'https://api.coingecko.com/api/v3/simple/price?ids=dai,usd-coin,true-usd,tether,yearn-finance,wrapped-bitcoin,ethereum,aave,uniswap,compound-governance-token,maker,havven,keep2r,link&vs_currencies=usd'
       const priceString = await rp(url);
       const priceJSON = JSON.parse(priceString)
 
