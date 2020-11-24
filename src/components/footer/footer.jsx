@@ -24,7 +24,6 @@ const styles = theme => ({
   padding: '20px',
   display: 'flex',
   width: '100%',
-  borderTop: '2px',
   borderColor: colors.darkGray,
   color: colors.darkGray,
   background: '#2C3040',
