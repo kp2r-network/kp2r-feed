@@ -8,7 +8,6 @@ import {
 } from '../constants';
 
 import { ERC20ABI } from "./abi/erc20ABI";
-import { UniswapV2OracleABI } from './abi/uniswapV2OracleABI';
 import { UniswapV2PairABI } from './abi/uniswapV2PairABI';
 import { Keep2rOracleABI } from './abi/keep2rOracleABI'
 
@@ -103,7 +102,7 @@ class Store {
     dispatcher.register(
       function (payload) {
         switch (payload.type) {
-          case GET_FEEDS:
+          default:case GET_FEEDS:
             this.getFeeds(payload);
             break;
         }
@@ -232,7 +231,7 @@ class Store {
           decimals: await token1Contract.methods.decimals().call({})
         }
       }
-      if (token0.symbol == "WETH") {
+      if (token0.symbol === "WETH") {
         return {
           token0: token1,
           token1: token0

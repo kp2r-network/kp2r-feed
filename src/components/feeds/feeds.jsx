@@ -10,7 +10,6 @@ import Store from "../../stores";
 import { colors } from '../../theme'
 
 import {
-  ERROR,
   GET_FEEDS,
   FEEDS_RETURNED,
   FEEDS_UPDATED,
