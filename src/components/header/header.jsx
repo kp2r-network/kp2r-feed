@@ -163,6 +163,9 @@ class Header extends Component {
             <Typography variant={ 'h1'} className={ classes.name } onClick={ () => { this.nav('') } }>KP2R.Network</Typography>
         </div>
           <div className={ classes.links }>
+            <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/lp-auction", "_blank")} >
+              <Typography variant={ 'h4'} >LP-Auction</Typography>
+            </div>
             <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/keep2r", "_blank")} >
               <Typography variant={ 'h4'} >Keep2r</Typography>
               </div>
@@ -174,9 +177,6 @@ class Header extends Component {
             </div>
             <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/how-to-use", "_blank")} >
               <Typography variant={ 'h4'} >How to Use</Typography>
-            </div>
-            <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/pre-sale", "_blank")} >
-              <Typography variant={ 'h4'} >Pre-Sale</Typography>
             </div>
           </div>
         </div>
