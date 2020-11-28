@@ -166,9 +166,15 @@ class Header extends Component {
             <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/lp-auction", "_blank")} >
               <Typography variant={ 'h4'} >LP-Auction</Typography>
             </div>
+            <div className={ classes.link } onClick={()=> window.open("https://swap.kp2r.network/", "_blank")} >
+              <Typography variant={ 'h4'} >Swap</Typography>
+            </div>
+            <div className={ classes.link } onClick={()=> window.open("https://swap.kp2r.network/#/pool", "_blank")} >
+              <Typography variant={ 'h4'} >Pool</Typography>
+            </div>
             <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/keep2r", "_blank")} >
               <Typography variant={ 'h4'} >Keep2r</Typography>
-              </div>
+            </div>
             <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/governance", "_blank")} >
               <Typography variant={ 'h4'} >Governance</Typography>
             </div>
