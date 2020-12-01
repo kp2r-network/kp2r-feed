@@ -131,10 +131,6 @@ class Footer extends Component {
       </div>
       <div className={ classes.products }>
         <Typography className={ classes.heading } variant={ 'h3'}>Useful Links</Typography>
-        <div  className={ classes.link } onClick={()=> window.open("/lp-auction")} >
-          <img alt="kp2r" src={ require('../../assets/icons/discount.svg') } height='20px' className={ classes.icon } />
-          <Typography variant={ 'h4'} >LP Auction <span role='img' description='fire' aria-label='pre-sale' aria-labelledby='kp2r'> 🔥</span></Typography>
-        </div>
         <div  className={ classes.link } onClick={()=> window.open("/how-to-use", "_blank")} >
           <img alt="kp2r" src={ require('../../assets/icons/guide.svg') } height='20px' className={ classes.icon } />
           <Typography variant={ 'h4'} >How to Use</Typography>
@@ -151,10 +147,13 @@ class Footer extends Component {
       <div className={ classes.products }>
         <Typography className={ classes.heading } variant={ 'h3'}>Media Partner</Typography>
           <div  className={ classes.link } >
-            <img alt="kp2r" src={ require('../../assets/partner/ct.svg') } height='42px' onClick={()=> window.open("/", "_blank")} className={ classes.icon } />
+            <img alt="Cointelegraph KP2R" src={ require('../../assets/partner/ct.svg') } height='42px' onClick={()=> window.open("https://cointelegraph.com/press-releases/kp2r-network-a-decentralized-marketplace-for-developers", "_blank")} className={ classes.icon } />
           </div>
           <div  className={ classes.link } >
-            <img alt="kp2r" src={ require('../../assets/partner/ether.png') } height='32px' onClick={()=> window.open("https://etherscan.io/dapp/0x9bde098be22658d057c3f1f185e3fd4653e2fbd1", "_blank")} className={ classes.icon } />
+            <img alt="Etherscan KP2R" src={ require('../../assets/partner/ether.png') } height='32px' onClick={()=> window.open("https://etherscan.io/dapp/0x9bde098be22658d057c3f1f185e3fd4653e2fbd1", "_blank")} className={ classes.icon } />
+          </div>
+          <div  className={ classes.link } >
+            <img alt="Bitcoin KP2R" src={ require('../../assets/partner/bitcoin.png') } height='22px' onClick={()=> window.open("https://news.bitcoin.com/kp2r-network-a-decentralized-marketplace-for-developers/", "_blank")} className={ classes.icon } />
           </div>
       </div>
       <div className={ classes.products }>

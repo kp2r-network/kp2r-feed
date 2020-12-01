@@ -163,9 +163,6 @@ class Header extends Component {
             <Typography variant={ 'h1'} className={ classes.name } onClick={ () => { this.nav('') } }>KP2R.Network</Typography>
         </div>
           <div className={ classes.links }>
-            <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/lp-auction", "_blank")} >
-              <Typography variant={ 'h4'} >LP-Auction</Typography>
-            </div>
             <div className={ classes.link } onClick={()=> window.open("https://swap.kp2r.network/", "_blank")} >
               <Typography variant={ 'h4'} >Swap</Typography>
             </div>
