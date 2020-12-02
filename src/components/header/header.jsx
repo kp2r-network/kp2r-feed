@@ -172,8 +172,8 @@ class Header extends Component {
             <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/keep2r", "_blank")} >
               <Typography variant={ 'h4'} >Keep2r</Typography>
             </div>
-            <div className={ classes.link } onClick={()=> window.open("https://kp2r.network/governance", "_blank")} >
-              <Typography variant={ 'h4'} >Governance</Typography>
+            <div className={ classes.link } onClick={()=> window.open("https://snapshot.page/#/keep2r.eth", "_blank")} >
+              <Typography variant={ 'h4'} >Vote</Typography>
             </div>
             <div className={ classes.link } onClick={()=> window.open("/", "_blank")} >
               <Typography variant={ 'h4'} >Feed</Typography>
